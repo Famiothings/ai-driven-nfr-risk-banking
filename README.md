@@ -1,7 +1,13 @@
 # ai-driven-nfr-risk-banking
-AI-Driven Non-Financial Risk Prediction and Control Effectiveness System for Banking. Capstone Project – Post Graduate Diploma in Artificial Intelligence and Machine Learning (Dec 2024). Submitted by: GAT. School: Asian Institute of Management (AIM) – Emeritus
+AI-Driven Non-Financial Risk Prediction and Control Effectiveness System for Banking. 
 
-# Note to Evaluator: 
+Capstone Project – Post Graduate Diploma in Artificial Intelligence and Machine Learning (Dec 2024). 
+
+School: Asian Institute of Management (AIM) – Emeritus
+
+---
+
+# Note to the Evaluator: 
 All detailed steps for preprocessing, EDA, visual representations (distributions,correlation matrix, tables, pair plots, etc.), model creation and training are documented with reproducible code and can be found in 'AI_Driven_NFR_Prediction_for_Banking.ipynb'. The whole notebook is designed and coded to be fully executable in Google Colab.
 
 ---
@@ -61,20 +67,46 @@ The project is designed to reflect real-world banking constraints, including rar
 
 4. **Modeling**
    - Supervised learning framework
-   - Classification and regression modeled separately
-   - Models evaluated: Logistic Regression, Decision Tree, Random Forest, SVM, LightGBM
-   - LightGBM selected as final model for both tasks
+   - Classification and Regression modeled separately
+   - Models evaluated (Classification): Logistic Regression, Decision Tree, Random Forest, SVM, LightGBM
+   - Models evaluated (Regerssion): Logistic Regression, Decision Tree, Random Forest, LightGBM
 
 5. **Evaluation**
    - Classification: Recall, PR-AUC, Recall@Top-10%
    - Regression: MAE, RMSE
    - Threshold tuning for business-aligned decision making
+   - LightGBM selected as final model for both tasks
+  
+6. **Experimentation on Other Models**
+   - Unsupervised Models: K-Means, DBSCAN, Hierarchical (Elbow and Silhoutte)
+   - Recommender System
+   - Deep Learning (not applicable, for further study)
 
-6. **Explainability & Governance**
+7. **Explainability & Governance**
    - SHAP for local and global explanations
+   - Addressed Limitations: Class Imbalance, Target Leakage, Overfitting
    - Bias and fairness considerations
-   - Governance and audit readiness
+
+8. **Solving the Business Problem**
+   - Event Occurrence: Identified business units that will most-likely experience a NFR event in the next 30 days
+   - Severity Amount: Predicted potential financial loss that could be avoided
+  
+9. **Future Recommendations and Areas for Further Study**
+   - Dynamic, adaptive risk thresholds
+   - Monitoring and refining features and evaluation metrics 
+   - More unstructured data (incident narratives, audit findings, regulatory messages) 
+
 
 ---
 
 ## Repository Structure
+
+ai-driven-nfr-risk-banking/
+  - data/: contains the 1 file of synthethic NFR data used for this project
+  - models/: contains 15 models (structured, unstructured, recommender, preprocessing)
+  - notebooks/: contains 1 full notebook and README as note to the evaluator
+  - presentation/: contains 4 files for business and technical decks
+  - report/: contains the final capstone project report
+  - requirements.txt: contains the requirements 
+
+
